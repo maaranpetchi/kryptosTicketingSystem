@@ -13,6 +13,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreateTicketComponent } from './Components/Ticket/CreateTicket/create-ticket/create-ticket.component';
 import { SpinnerComponent } from './Components/Spinner/spinner/spinner.component';
 import { RegisterComponent } from './Components/Register/register/register.component';
+import { MatIconModule } from '@angular/material/icon';
+import { EditComponent } from './Components/EditPage/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { RegisterComponent } from './Components/Register/register/register.compo
     DashboardComponent,
     CreateTicketComponent,
     SpinnerComponent,
-    RegisterComponent
+    RegisterComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { RegisterComponent } from './Components/Register/register/register.compo
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    MatIconModule,
     HttpClientModule,
     ReactiveFormsModule 
   ],

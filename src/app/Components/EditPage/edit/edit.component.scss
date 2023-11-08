@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 100% of the viewport height */
+    width: 100vw;
+    margin: 0;
+  }
+
+  .centered-div {
+    // width: 200px; /* Set the width of your div */
+    // height: 200px; /* Set the height of your div */
+    background-color: lightblue;
+    text-align: center;
+    line-height: 200px; /* Should be equal to the height to vertically center content */
+  }
+
+  .container {
+    display: grid;
+    margin: 48px;
+    width: 806px;
+    margin-left: 169px;
+    grid-template-columns: 1fr;
+    background: aliceblue;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "editticket";
+  }
+  
+  .editticket {  display: grid;
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.3fr 2fr 0.7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . ."
+      ". tickets ."
+      ". . .";
+    grid-area: editticket;
+  }
+  
+  .tickets { grid-area: tickets; }
+  

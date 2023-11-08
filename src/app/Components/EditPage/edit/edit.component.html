@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="editticket">
+          <div class="tickets">
+            <form action="">
+
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label for="issue">Issue</mat-label>
+                            <input matInput id="issue" name="issue" [(ngModel)]="issue">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label for="issue">BayNumber</mat-label>
+                            <input matInput id="BayNumber" name="BayNumber" [(ngModel)]="BayNumber" name="baynumber">
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label for="issue">Subject</mat-label>
+                            <input matInput id="Subject" name="Subject" [(ngModel)]="Subject" name="subject">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label for="issue">Content</mat-label>
+                            <input matInput id="Content" name="Content" [(ngModel)]="Content" name="assign">
+                          </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label for="issue">Assign</mat-label>
+                            <input matInput id="Assign" name="Assign" [(ngModel)]="Assign" name="assign">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <mat-form-field>
+                            <mat-label>Status</mat-label>
+                            <mat-select formControlName="status" >
+                                <mat-option *ngFor="let status of statuses" [(ngModel)]="Status" name="status">{{ status.status
+                                    }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6"><button type="button" class="btn btn-success" (click)="downloadFile()">Download</button></div>
+                    <div class="col-6"></div>
+                </div>
+          </form> 
+          </div>
+        </div>
+      </div>
+      
+
+
+    
+</body>
+</html>

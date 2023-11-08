@@ -5,6 +5,7 @@ import { HeaderComponent } from './Components/Header/header/header.component';
 import { DashboardComponent } from './Components/Dashboard/dashboard/dashboard.component';
 import { CreateTicketComponent } from './Components/Ticket/CreateTicket/create-ticket/create-ticket.component';
 import { RegisterComponent } from './Components/Register/register/register.component';
+import { EditComponent } from './Components/EditPage/edit/edit.component';
 const routes: Routes = [
   { path: '',   redirectTo: '/login', pathMatch: 'full' }, // redirect to `first-component`
   { path: 'login', component: LoginComponent },
@@ -14,7 +15,9 @@ const routes: Routes = [
     component: HeaderComponent,
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'createTicket', component: CreateTicketComponent },]
+      { path: 'createTicket', component: CreateTicketComponent },
+      { path: 'edit', component: EditComponent },
+    ]
   }
   // { path: 'second-component', component: SecondComponent },
   //{ path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page

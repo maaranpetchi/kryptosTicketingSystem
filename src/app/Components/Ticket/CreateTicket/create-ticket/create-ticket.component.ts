@@ -6,6 +6,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { LoginService } from 'src/app/Services/Login/login.service';
 import { SpinnerService } from 'src/app/Components/Spinner/spinner.service';
 import Swal from 'sweetalert2';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-create-ticket',
@@ -21,7 +22,7 @@ export class CreateTicketComponent implements OnInit {
   //Ngmodel
   selectedDepartment: any
   selectedIssue: any
-  constructor(private http: HttpClient, private fb: FormBuilder, private loginservice: LoginService, private spinnerservice: SpinnerService) {
+  constructor(private http: HttpClient, private fb: FormBuilder, private loginservice: LoginService, private spinnerservice: SpinnerService,private cookieService:CookieService) {
     this.ticketForm = this.fb.group({
       department: [0],
       issues: [0],
@@ -113,7 +114,9 @@ export class CreateTicketComponent implements OnInit {
       "bayNumber": this.ticketForm.value.baynumber,
       "content": this.ticketForm.value.content,
       "priority": this.ticketForm.value.priority,
-      "filePath": this.selectedFileName
+      "filePath": this.selectedFileName,
+      "AssignedBy": this.cookieService.get('username'),
+    "AssignedTo": ""
     }
     this.http.post<any>(environment.apiURL + `Tickets/createTicket`, payload).subscribe((submit) => {
       this.spinnerservice.requestEnded();
