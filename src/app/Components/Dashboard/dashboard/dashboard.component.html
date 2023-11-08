@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="main-top">
+            <h1>Reports</h1>
+        </div>
+        <div class="main-skills">
+            <div class="card">
+                <i class="fas fa-info" id="info"></i>
+                <h3>New Ticket</h3>
+                <p>There are 10 new tickets added to list</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-folder-open" id="open"></i>
+                <h3>Open Ticket</h3>
+                <p>There are 5 open tickets in list</p>
+
+            </div>
+            <div class="card">
+                <i class="fas fa-users" id="users"></i>
+                <h3>Un-Assigned Ticket</h3>
+                <p>There are 6 tickets in list</p>
+
+            </div>
+            <div class="card">
+                <i class="fas fa-solid fa-check" id="check"></i>
+                <h3>Closed Ticket</h3>
+                <p>There are 3 tickets closed from the list</p>
+
+            </div>
+        </div>
+
+        <section class="main-course">
+            <div class="row">
+                <div class="col">
+                    <h1>Table Records</h1>
+                </div>
+                <div class="col">
+                    <div class="buttons" >
+                    <button type="button" (click)="createTicket()" id="createbutton" class="btn btn-primary"> <i class="fas fa-solid fa-plus" id="check"></i>Create Ticket</button>
+                </div>
+                </div>
+            </div>
+            <div class="course-box">
+                <div class="course">
+
+
+                </div>
+            </div>
+
+        </section>
+    </section>
+</body>
+
+</html>

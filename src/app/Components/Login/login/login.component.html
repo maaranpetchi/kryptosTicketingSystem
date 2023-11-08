@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="container1 col-8">
+    <div class="img_container">
+      <img style="height: 500px;" class="login_img" src="../../../../assets/Forgot password-rafiki.png" alt="login page illustration">
+    </div>
+  </div>
+  <div class="container2 col-4">
+    <div class="login_form">
+      <form>
+<img src="../../../assets/new-kryptos-black.webp" alt="logo" srcset="">
+        <br>
+        <div class="form-group" [@moveRight]>
+          <label for="username">Employee Id</label>
+          <input type="text" class="login-form-input form-control" [(ngModel)]="employeeID" id="username" placeholder="Enter EmployeeId"  [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group" [@moveRight]>
+          <div class="cut"></div>
+          <label for="password">Password</label>
+          <input type="password" [(ngModel)]="password" class="login-form-input form-control" id="password" placeholder="Password"  [ngModelOptions]="{standalone: true}">
+        </div>
+        <button type="submit" class="btn_login btn btn-primary" (click)="login()">Login</button>
+        <p>New to kryptos! <a routerLink="/signup">join with us</a></p>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Responsive Registration Form | CodingLab </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Registration</div>
+
+        <div class="content">
+            <form (ngSubmit)="onSubmit()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Employee Id:</span>
+                        <input type="text" class="form-control" id="employeeId" name="employeeId"
+                            [(ngModel)]="EmployeeId" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">FirstName:</span>
+                        <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="FirstName"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">LastName:</span>
+                        <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="LastName"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email:</span>
+                        <input type="email" class="form-control" id="email" name="email" [(ngModel)]="Email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">PhoneNumber:</span>
+                        <input type="tel" class="form-control" id="phoneno" name="phoneno" [(ngModel)]="PhoneNum"
+                            required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="Password"
+                        required pattern="^[a-zA-Z0-9\s]{8,15}$">
+                 
+                 <div *ngIf="Password && Password.length > 0 && !isValidPassword()" class="text-danger">
+                   Please enter a password that is 8 to 15 characters long and contains only letters and numbers.
+                 </div>
+                                  
+                    </div>
+                    <div class="input-box">
+                        <mat-form-field>
+                            <mat-label>Select Role</mat-label>
+                            <mat-select [(ngModel)]="role" name="role">
+                                <mat-option [value]="true">Admin</mat-option>
+                                <mat-option [value]="false">User</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="button" style="float:right">
+                    <button type="submit" class="button-24" role="button">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
